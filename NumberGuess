@@ -1,0 +1,146 @@
+using System;
+using System.Collections.Generic;
+namespace Guessgame
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+           
+           
+            Console.WriteLine("it's Guess game time, choose a Level! A= Easy, B= Medium, C= Hard"); 
+            string userSelect  = Console.ReadLine();
+
+            if (userSelect == "A")
+
+            {
+
+            Random random = new Random();
+            int randomNumber = random.Next(1, 11);
+            int guess;
+            int numberOfGuesses = 6;
+            bool gameOver = false;
+
+            Console.WriteLine("Level Easy: Select Number from 1 - 10....");
+            while (gameOver == false)
+            {
+                 guess = Convert.ToInt32(Console.ReadLine());
+                 numberOfGuesses--;
+
+            if (guess != randomNumber && numberOfGuesses == 0)
+            {
+                Console.WriteLine("You've used up all your 6 guess chances... GAME OVER!");
+                gameOver = true;
+            }
+            else if ( guess == randomNumber)
+            {
+                Console.WriteLine("YOU WIN");
+                gameOver = true;
+            
+            }
+            else if (guess > randomNumber)
+            {
+                Console.WriteLine("You've entered a number that's high, Go Low!");
+            
+            }
+            else if (guess < randomNumber)
+            {
+                Console.WriteLine("You've entered a number that's low, Go High!");
+
+                 
+            }
+            Console.ReadLine();
+            }
+
+            } 
+             if (userSelect == "B")
+
+            {
+
+            Random random = new Random();
+            int randomNumber = random.Next(1, 21);
+            int guess;
+            int numberOfGuesses = 4;
+            bool gameOver = false;
+
+            Console.WriteLine("Level Medium: Select Number from 1 - 20....");
+            while (gameOver == false)
+            {
+                 guess = Convert.ToInt32(Console.ReadLine());
+                 numberOfGuesses--;
+
+            if (guess != randomNumber && numberOfGuesses == 0)
+            {
+                Console.WriteLine("You've used up all your 4 guess chances... GAME OVER!");
+                gameOver = true;
+            }
+            else if ( guess == randomNumber)
+            {
+                Console.WriteLine("YOU WIN");
+                gameOver = true;
+            
+            }
+            else if (guess > randomNumber)
+            {
+                Console.WriteLine("You've entered a number that's high, Go Low!");
+            
+            }
+            else if (guess < randomNumber)
+            {
+                Console.WriteLine("You've entered a number that's low, Go High!");
+
+                 
+            }
+            Console.ReadLine();
+
+
+            }
+            
+        } 
+
+              if (userSelect == "C")
+
+            {
+
+            Random random = new Random();
+            int randomNumber = random.Next(1, 51);
+            int guess;
+            int numberOfGuesses = 3;
+            bool gameOver = false;
+
+            Console.WriteLine("Level Hard: Select Number from 1 - 50....");
+            while (gameOver == false)
+            {
+                 guess = Convert.ToInt32(Console.ReadLine());
+                 numberOfGuesses--;
+
+            if (guess != randomNumber && numberOfGuesses == 0)
+            {
+                Console.WriteLine("You've used up all your 3 guess chances... GAME OVER!");
+                gameOver = true;
+            }
+            else if ( guess == randomNumber)
+            {
+                Console.WriteLine("YOU WIN");
+                gameOver = true;
+            
+            }
+            else if (guess > randomNumber)
+            {
+                Console.WriteLine("You've entered a number that's high, Go Low!");
+            
+            }
+            else if (guess < randomNumber)
+            {
+                Console.WriteLine("You've entered a number that's low, Go High!");
+
+                 
+            }
+            Console.ReadLine();
+            }
+            }
+        }
+    } 
+}
+   
